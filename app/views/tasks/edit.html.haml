@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @task
-\|
-= link_to 'Back', tasks_path
+= link_to 'home', root_url, class: "btn btn-warning"
+
+= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm"
