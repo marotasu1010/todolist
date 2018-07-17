@@ -3,6 +3,8 @@
   .title
     %h1.site-title
       TODO-LIST
+    %h3
+      = Time.now.in_time_zone('Tokyo').strftime('%Y/%m/%d/ %H:%M')
     %nav
       %ul
         %li
