@@ -15,6 +15,9 @@ gem 'erb2haml'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'simple_calendar', '~> 2.0'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+gem 'kaminari'
 
 # user関連処理
 gem 'devise'
