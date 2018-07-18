@@ -3,18 +3,17 @@
 }
 
 #wrap {
-  content: '';
-  display: block;
-  clear: both;
+  display: flex;
+  width: 50%;
 }
 
 .list {
-  float: left;
+  flex: 3;
   
 }
 
-.memo {
-  float: right;
+#memo {
+  flex: 2;
 
 }
 
