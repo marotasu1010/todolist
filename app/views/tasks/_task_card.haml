@@ -1,12 +1,25 @@
 .task-card.card
 .row
   .col-sm-12.col-md-8.col-lg-5
-    %ul.list-group-list 
-      %li.list-group-item タスク名: #{task.name}
-      %li.list-group-item  タスク: #{task.status}
-      %li.list-group-item メモ: #{task.content}
-      %li.list-group-item 作成時刻: #{task.created_at.in_time_zone('Tokyo').strftime('%Y/%m/%d %H:%M')}
-      %li.list-group-item 更新時刻: #{task.updated_at.in_time_zone('Tokyo').strftime('%Y/%m/%d/ %H:%M')}
-%span     
-= link_to 'タスクを編集する', edit_task_path(task), class: 'btn btn-outline-success'
+    #wrap
+      .list
+        %ul.list-group-list 
+          %li.list-group-item 
+            %bタスク名:
+            #{task.name}
+          %li.list-group-item
+            %b タスク: 
+            #{task.status}
+          %li.list-group-item 
+            %b作成時刻: 
+            #{task.created_at.in_time_zone('Tokyo').strftime('%Y/%m/%d %H:%M')}
+          %li.list-group-item 
+            %b更新時刻: 
+            #{task.updated_at.in_time_zone('Tokyo').strftime('%Y/%m/%d/ %H:%M')}
+        .edit-btn
+          = link_to 'タスクを編集する', edit_task_path(task), class: 'btn btn-outline-success'       
+      #memo.card
+        .card-body
+          %bメモ:
+          #{task.content} 
 %hr

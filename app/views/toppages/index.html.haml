@@ -8,10 +8,14 @@
       = link_to 'Use Todolist', new_user_registration_path, class: 'btn btn-primary btn-lg' 
      
 - if user_signed_in?
-  %h2 my todo list
-  %ul
-    %li
-      = link_to 'タスクを追加する', new_task_path
+  .wrapper
+    .left
+      %h1 my todo list
+      .add.bt
+      = link_to 'タスクを追加する', new_task_path, class: 'btn btn-outline-primary'
+    .right
+      = week_calendar do |date|
+        = date
   %hr
 - if @my_tasks
   - @my_tasks.each do |task|

@@ -2,10 +2,20 @@
   border: #333333 1px solid;
 }
 
-.wrap {
-  float: left
+#wrap {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.list {
+  float: left;
+  
 }
 
 .memo {
-  float: right
+  float: right;
+
 }
+
+
